@@ -23,6 +23,7 @@ class TaskRepository implements TaskRepositoryInterface
             ->where('user_id', $user_id)->get();
         return $result;
     }
+
     public function create(array $data)
     {
         try {
@@ -116,7 +117,6 @@ class TaskRepository implements TaskRepositoryInterface
         }
     }
 
-
     private function isValid($data)
     {
 
@@ -135,5 +135,9 @@ class TaskRepository implements TaskRepositoryInterface
         if (!strtotime($data['last_date'])) {
             throw new \Exception('El campo Fecha de Vencimiento debe ser una fecha válida');
         }
+    }
+
+    public function show($task_id){
+        return Task::where('id',$task_id)->first();
     }
 }

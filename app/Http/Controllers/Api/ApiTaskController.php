@@ -35,4 +35,9 @@ class ApiTaskController extends Controller
     {
         return $this->taskRepository->delete($task_id);
     }
+
+    public function show($task_id)
+    {
+        return $this->taskRepository->show($task_id);
+    }
 }
