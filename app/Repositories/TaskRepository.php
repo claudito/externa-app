@@ -14,7 +14,7 @@ class TaskRepository implements TaskRepositoryInterface
             tasks.id,
             tasks.title as titulo,
             tasks.description as descripcion,
-            tasks.last_date as fecha_vencimiento,
+            DATE_FORMAT(tasks.last_date,'%d/%m/%Y') as fecha_vencimiento,
             statuses.name estado
         ")
             ->join('statuses', function ($join) {
