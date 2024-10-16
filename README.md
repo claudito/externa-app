@@ -9,7 +9,8 @@
 -  Generar LLave Secreta: php artisan jwt:secret
 -  Cargar Migraciones y Seeder(Ejecutar por Consola) : php artisan migrate:fresh --seed
 -  Cargar Ruta de Test(Ejecutar por Consola) : php artisan serve --host=127.0.0.1 --port=8000 
--  Ejecutar npm: npm run dev
+-  Ejecutar npm Install: npm install
+-  Ejecutar : npm run dev
 
 ## Requisitos mínimos
 -  PHP 8 o superior
